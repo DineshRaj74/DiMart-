@@ -8,9 +8,9 @@ This project is a frontend e-commerce website built using HTML, CSS, and JavaScr
 - Order Management
 
 ## Technologies Used
-- Frontend: HTML, CSS, JavaScript / React
-- Backend: Node.js / Python
-- Database: MySQL / MongoDB
+- Frontend: HTML, CSS, JavaScript 
+- Backend: Java
+- Database: MySQL
 
 ## Purpose
 This project was developed as part of learning full stack web development.
