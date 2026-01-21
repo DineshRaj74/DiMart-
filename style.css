@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url()no-repeat center center/cover;
+  animation: fadeBG 10s infinite alternate ease-in-out;
+}
+
+
+.name{
+    color:black;
+}
+
+h2{
+    color:black;
+}
+
+.new{
+  width: 350px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  animation: slideUp 1s ease-in-out;
+  text-align: center;
+}
+
+@keyframes slideUp 
+{
+  from { 
+        transform: translateY(40px); 
+        opacity: 0; 
+       }
+  to 
+  { 
+    transform: translateY(40); 
+    opacity: 1; 
+  }
+}
+
+.new{
+height: 300px;
+width: 200px;
+border-radius: 10px;
+border: 2px solid black;
+padding: 20px;
+}
+.suganya:hover{
+    color: rgb(167, 194, 128);
+}
+.log:hover {
+  background: #99888e10;
+  transform: scale(1.07);
+}
+
+.signup-text {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.signup-text a {
+  color: black;
+  text-decoration: none;
+}
+
+.signup-text:hover{
+    background: darkgrey;
+    transform: scale(0.75);
+}
+
+.page{
+  text-align: center;
+}

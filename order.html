@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">My Store</div>
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart(<span id="cart-count">0</span>)</a></li>
+    </ul>
+</nav>
+
+<!-- Order Form -->
+<div class="order-container">
+    <h1>Place Your Order</h1>
+    <p>Fill in your details and confirm your purchase.</p>
+
+    <form id="orderForm">
+        <!-- Customer Info -->
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" placeholder="Enter your delivery address" required></textarea>
+
+        <label for="payment">Payment Method</label>
+        <select id="payment" name="payment" required>
+            <option value="">Select Payment Method</option>
+            <option value="COD">Cash on Delivery</option>
+            <option value="UPI">UPI/Net Banking</option>
+            <option value="Card">Credit/Debit Card</option>
+        </select>
+
+        <button type="submit" class="btn">Confirm Order</button>
+    </form>
+</div>
+
+<footer>
+    <p>© DiMart. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Optional: Auto-fill product info from query string (e.g., buy-now?name=Nike&price=3500)
+    const urlParams = new URLSearchParams(window.location.search);
+    const productName = urlParams.get('name');
+    const productPrice = urlParams.get('price');
+
+    if (productName) document.getElementById('productName').value = productName;
+    if (productPrice) document.getElementById('productPrice').value = "₹" + productPrice;
+
+    // Form submit
+    document.getElementById('orderForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        alert("Thank you! Your order has been placed.");
+        window.location.href = "home.html"; // redirect after order
+    });
+</script>
+
+</body>
+</html>

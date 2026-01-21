@@ -1,0 +1,77 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.navbar .nav-links a:hover,
+.navbar .nav-links .active {
+    color: #ff6347;
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.contact-section h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+.contact-section p {
+    margin-bottom: 30px;
+    color: #555;
+}
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-section input,
+.contact-section textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+.contact-section button {
+    padding: 12px;
+    border: none;
+    background-color: #111;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.contact-section button:hover {
+    background-color: #ff6347;
+}
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}

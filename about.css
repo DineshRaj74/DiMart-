@@ -1,0 +1,98 @@
+/* Reset & Basic */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 15px 30px;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #f04e30;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero h1 span {
+    color: #f04e30;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Content Section */
+.content h2 {
+    color: #111;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.content p, .content ul {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.content ul {
+    list-style: disc inside;
+}
+
+strong{
+     color: #f04e30;
+}
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: #111;
+    color: #fff;
+}

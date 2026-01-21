@@ -1,0 +1,244 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #333;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    background: #111827;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #38bdf8;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* SEARCH BOX */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 6px 16px;
+    width: 480px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+}
+
+.search-icon {
+    width: 20px;
+    cursor: pointer;
+}
+
+/* MENU LINKS – IMPROVED */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover {
+    color: #38bdf8;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+.container {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+.product-box {
+    display: flex;
+    gap: 30px;
+    background: #dcdcdc;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+    height: 100%;
+}
+
+.product-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+}
+
+/* =========================
+   IMAGE SECTION – FULL COVER
+========================= */
+.left {
+    width: 45%;
+    height: 360px;       /* match card height */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.product-box:hover .product-img {
+    transform: scale(1.08);
+}
+
+/* =========================
+   DETAILS
+========================= */
+.right {
+    width: 55%;
+    padding: 20px; 
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #16a34a;
+    margin-bottom: 12px;
+}
+
+.desc {
+    font-size: 15px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+/* =========================
+   BUTTON & LINK DESIGN
+========================= */
+.btn {
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+a.btn {
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+/* ADD TO CART */
+.add-cart {
+    background: #111827;
+    color: #ffffff;
+}
+
+.add-cart:hover {
+    background: #1f2937;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+/* BUY NOW */
+.buy {
+    background: linear-gradient(135deg, #38bdf8, #0284c7);
+    color: #ffffff;
+}
+
+.buy:hover {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    box-shadow: 0 0 14px rgba(56,189,248,0.7);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .product-box {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .left {
+        height: 280px;   /* was 280px */
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 60px;
+}

@@ -1,0 +1,254 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f4f7;
+    padding-top: 85px;
+    color: #222;
+}
+
+/* =========================
+       NAVBAR
+========================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.logo {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: #facc15;
+}
+
+#cart-count {
+    background: #ff4d4d;
+    padding: 2px 7px;
+    border-radius: 50%;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+/* =========================
+      SEARCH BOX
+========================= */
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    background: #fff;
+    padding: 7px 16px;
+    border-radius: 30px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 15px;
+}
+
+.search-icon {
+    width: 18px;
+    cursor: pointer;
+}
+
+/* =========================
+     PRODUCT GRID
+========================= */
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* TWO PER ROW */
+    gap: 35px;
+    width: 90%;
+    margin: auto;
+}
+
+/* =========================
+     PRODUCT CONTAINER
+========================= */
+.container {
+    width: 100%;
+}
+
+/* =========================
+     PRODUCT CARD
+========================= */
+.product-box {
+    display: flex;
+    gap: 30px;
+    background: #dcdcdc;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+    height: 100%;
+}
+
+.product-box:hover {
+    transform: translateY(-6px);
+}
+
+/* =========================
+     PRODUCT IMAGE
+========================= */
+.left {
+    width: 260px;
+    flex-shrink: 0;
+}
+
+.product-img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+/* =========================
+     PRODUCT DETAILS
+========================= */
+.right {
+    flex: 1;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 22px;
+    color: #e63946;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.desc {
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: #0f0e0e;
+    margin-bottom: 22px;
+}
+
+/* =========================
+        BUTTONS
+========================= */
+.btn {
+    padding: 12px 26px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Add to Cart */
+.add-cart {
+    background: #2563eb;
+    color: #fff;
+    margin-right: 14px;
+}
+
+.add-cart:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+/* Buy Now */
+.buy-btn {
+    background: #000000;
+    color: #fff;
+    font-weight: 600;
+}
+
+.buy-btn:hover {
+    background: #db2777;;
+    transform: scale(1.05);
+}
+
+a.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* =========================
+     RESPONSIVE DESIGN
+========================= */
+@media (max-width: 1024px) {
+    .product-section {
+        grid-template-columns: 1fr; /* ONE PER ROW */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .product-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+}
+
+/* =========================
+        FOOTER
+========================= */
+footer {
+    background: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 14px;
+}
