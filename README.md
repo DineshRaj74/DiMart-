@@ -13,5 +13,9 @@ It demonstrates practical skills in creating interactive web pages, managing dyn
 - Backend: Java
 - Database: MySQL
 
+## Demo
+- GitHub Repository: [https://github.com/DineshRaj74/DiMart](https://github.com/DineshRaj74/DiMart)
+- Live Demo: [https://dineshraj74.github.io/DiMart/](https://dineshraj74.github.io/DiMart/)
+
 ## Purpose
 This project was developed as part of learning full stack web development.
